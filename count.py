@@ -38,9 +38,29 @@ for line in file:
     chunks = line.split(' ') 
     if line == '\n':
         if packet_list:
-            num_ethernet = num_ethernet + 1
             #do some processing
-
+            eth_type = packet_list[12] + packet_list[13]
+            if eth_type == "0800":
+                num_ethernet += 1
+                num_ip += 1
+                #ip, check packet 23
+                if packet_list[23] == "01":
+                    num_icmp += 1
+                    if packet_list[34] == "08" or packet_list[34] == "00":
+                        num_ping += 1
+                elif packet_list[23] == "06":
+                    num_tcp += 1
+                elif packet_list[23] == "11":
+                    num_udp += 1
+                    src_port = packet_list[34] + packet_list[35]
+                    dest_port = packet_list[36] + packet_list[37]
+                    if src_port == "0035" or dest_port == "0035":
+                        num_dns += 1
+                    elif src_port == "0043" or src_port == "0044":
+                        num_dhcp += 1
+            elif eth_type == "0806":
+                num_ethernet += 1
+                num_arp += 1
             #resets to empty list
             packet_list = []
         elif reassembled_mode:
@@ -60,6 +80,36 @@ for line in file:
             bytelist = data.split(' ')
             bytelist = filter(filter_empty, bytelist)
             for byte in bytelist:
-                packet_list.append(bin(int(byte, 16))[2:].zfill(8))
-                ascii_list.append(byte.decode('hex'))
-print num_ethernet
+                packet_list.append(byte)
+                #packet_list.append(bin(int(byte, 16))[2:].zfill(8))
+                #ascii_list.append(byte.decode('hex'))
+if packet_list:
+    #do some processing
+    eth_type = packet_list[12] + packet_list[13]
+    if eth_type == "0800":
+        num_ethernet += 1
+        num_ip += 1
+        #ip, check packet 23
+        if packet_list[23] == "01":
+            num_icmp += 1
+            if packet_list[34] == "08" or packet_list[34] == "00":
+                num_ping += 1
+        elif packet_list[23] == "06":
+            num_tcp += 1
+        elif packet_list[23] == "11":
+            num_udp += 1
+            src_port = packet_list[34] + packet_list[35]
+            dest_port = packet_list[36] + packet_list[37]
+            if src_port == "0035" or dest_port == "0035":
+                num_dns += 1
+            elif dest_port == "0043" or dest_port == "0044":
+                num_dhcp += 1
+print "total number of Ethernet (IP + ARP) packets = " + str(num_ethernet)
+print "total number of IP packets = " + str(num_ip)
+print "total number of ARP packets = " + str(num_arp)
+print "total number of ICMP packets = " + str(num_icmp)
+print "total number of TCP packets = " + str(num_tcp)
+print "total number of UDP packets = " + str(num_udp)
+print "total number of Ping packets = " + str(num_ping)
+print "total number of DHCP packets = " + str(num_dhcp)
+print "total number of DNS packets = " + str(num_dns)
