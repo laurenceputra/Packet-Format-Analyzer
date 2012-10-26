@@ -1,14 +1,6 @@
-import binascii
-import string
 import sys
 
-def filter_empty(element):
-    return element != ''
-
-def is_hex(str):
-    hex_digits = set(string.hexdigits)
-    return all(c in hex_digits for c in str)
-
+import packet_analyzer_util
 
 if len(sys.argv) > 1:
     filename = sys.argv[1]
@@ -68,17 +60,17 @@ for line in file:
             if reassembled_track == 2:
                 reassembled_mode = False
                 reassembled_track = 0
-    elif chunks[0] == 'Reassembled':
+    elif chunks[0] == 'Reassembled' or chunks[0] == 'Uncompressed':
         reassembled_mode = True
     elif not reassembled_mode:
-        if is_hex(chunks[0]):
+        if packet_analyzer_util.is_hex(chunks[0]):
             offset_len = len(chunks[0])
             #get the individual components of each line
             offset = line[:offset_len]
             data = line[offset_len + 2: offset_len + 2 + 47]
             ascii = line[offset_len + 52:-1]
             bytelist = data.split(' ')
-            bytelist = filter(filter_empty, bytelist)
+            bytelist = filter(packet_analyzer_util.filter_empty, bytelist)
             for byte in bytelist:
                 packet_list.append(byte)
                 #packet_list.append(bin(int(byte, 16))[2:].zfill(8))
@@ -104,6 +96,7 @@ if packet_list:
                 num_dns += 1
             elif dest_port == "0043" or dest_port == "0044":
                 num_dhcp += 1
+
 print "total number of Ethernet (IP + ARP) packets = " + str(num_ethernet)
 print "total number of IP packets = " + str(num_ip)
 print "total number of ARP packets = " + str(num_arp)
