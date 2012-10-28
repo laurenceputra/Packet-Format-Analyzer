@@ -105,7 +105,32 @@ for line in file:
                                 #section 1: name
                                 ans_name_type = packet_list[curr_read_index][0]
                                 if ans_name_type == 'c':
-                                    record_print_list.append('\tName = ' + url_dict[(packet_list[curr_read_index]+packet_list[curr_read_index + 1])[1:]])
+                                    if (packet_list[curr_read_index] + packet_list[curr_read_index + 1])[1:0] in url_dict:
+                                        record_print_list.append('\tName = ' + url_dict[(packet_list[curr_read_index] + packet_list[curr_read_index + 1])[1:0]])
+                                    else:
+                                        tmp_index = int(packet_list[curr_read_index][1:] + packet_list[curr_read_index + 1], 16)
+                                        tmp_index = tmp_index + offset + 8 + 20 + 14
+                                        read_url_done = False
+                                        num_bytes = int(packet_list[tmp_index], 16)
+                                        tmp_index += 1
+                                        url = ''
+                                        while not read_url_done:
+                                            bytes_count = num_bytes
+                                            read_url_segment_done = False
+                                            while not read_url_segment_done:
+                                                url += packet_list[tmp_index].decode('hex')
+                                                tmp_index += 1
+                                                bytes_count -= 1
+                                                if bytes_count == 0:
+                                                    read_url_segment_done = True
+                                            num_bytes = int(packet_list[tmp_index], 16)
+                                            tmp_index += 1
+                                            if num_bytes == 0:
+                                                read_url_done = True
+                                            else:
+                                                url += '.'
+                                        record_print_list.append('\tName = ' + url)
+                                        url_dict[(packet_list[curr_read_index] + packet_list[curr_read_index + 1])[1:0]] = url
                                     curr_read_index += 2
                                 #section 2: type
                                 dns_type = int(packet_list[curr_read_index] + packet_list[curr_read_index + 1], 16)
@@ -136,8 +161,6 @@ for line in file:
                                     record_print_list.append('\tAddr = ' + ip)
                                 elif dns_type == 5:
                                     record_print_list.append('\tCNAME = ' + url.decode('hex'))
-                                    print hex(url_start)[2:].zfill(3)
-                                    print count
                                     url_dict[hex(url_start)[2:].zfill(3)] = url.decode('hex')
                                 record_print_list.append('')
                                 answers_count -= 1
@@ -189,6 +212,7 @@ elif ignore_mode:
         ignore_mode = False
         ignore_track = 0
 
+print '\n'.join(print_list)
 print "total number of DNS packets = " + str(num_dns)
 print "total number of DNS transactions = " + str(num_dns_transactions)
-print '\n'.join(print_list)
+print "printed = " + str(len(print_list))
