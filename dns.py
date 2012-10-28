@@ -59,7 +59,6 @@ if packet_list:
     num_dns_transactions += process_result['num_dns_transactions']
     if process_result['print_stuff']:
         print_list.append(process_result['print_stuff'])
-print '\n'.join(print_list)
 print "total number of DNS packets = " + str(num_dns)
 print "total number of DNS transactions = " + str(num_dns_transactions)
-print "printed = " + str(len(print_list))
+print '\n'.join(print_list)
