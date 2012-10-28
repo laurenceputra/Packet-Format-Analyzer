@@ -22,7 +22,7 @@ def read_url(packet, start, url_start, length = 0):
             bytes_count -= 1
             if bytes_count == 0:
                 read_url_segment_done = True
-        num_bytes = packet_list[curr_read_index]
+        num_bytes = packet[curr_read_index]
         curr_read_index += 1
         if num_bytes == '00':
             read_url_done = True

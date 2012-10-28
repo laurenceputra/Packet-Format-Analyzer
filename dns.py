@@ -67,9 +67,10 @@ for line in file:
                                 read_url_done = False
                                 url_start = curr_read_index - offset - 8 - 20 - 14
                                 read_url_dict = packet_analyzer_util.read_url(packet_list, curr_read_index, url_start)
-                                url_dict[hex(read_url_dict['url_start'])[2:].zfill(3)] = read_url_dict['url']
+                                url_dict[hex(read_url_dict['url_start_index'])[2:].zfill(3)] = read_url_dict['url']
                                 record_print_list.append('\tName = ' + read_url_dict['url'])
                                 #section 2: type
+                                curr_read_index += read_url_dict['length']
                                 dns_type = int(packet_list[curr_read_index] + packet_list[curr_read_index + 1], 16)
                                 curr_read_index += 2
                                 record_print_list.append('\tType = ' + str(dns_type))
