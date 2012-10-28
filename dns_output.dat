@@ -1,0 +1,1164 @@
+total number of DNS packets = 1171
+total number of DNS transactions = 583
+----------------------
+DNS Transaction
+----------------------
+transaction_id = 81ca
+Questions = 1
+Answers RRs = 1
+Authority RRs = 3
+Additional RRs = 3
+Queries:
+	Name = ntp.ubuntu.com
+	Type = 1
+	Class = 1
+Answers:
+	Name = ntp.ubuntu.com
+	Type = 1
+	Class = 1
+	Time to live = 600
+	Data length = 4
+	Addr = 91.189.94.4
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = aae6
+Questions = 1
+Answers RRs = 1
+Authority RRs = 3
+Additional RRs = 3
+Queries:
+	Name = ntp.ubuntu.com
+	Type = 1
+	Class = 1
+Answers:
+	Name = ntp.ubuntu.com
+	Type = 1
+	Class = 1
+	Time to live = 598
+	Data length = 4
+	Addr = 91.189.94.4
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = b714
+Questions = 1
+Answers RRs = 2
+Authority RRs = 4
+Additional RRs = 4
+Queries:
+	Name = i1.ytimg.com
+	Type = 1
+	Class = 1
+Answers:
+	Name = i1.ytimg.com
+	Type = 5
+	Class = 1
+	Time to live = 3471
+	Data length = 17
+	CNAME = ytimg.l.google.com
+
+	Name = ytimg.l.google.com
+	Type = 1
+	Class = 1
+	Time to live = 67
+	Data length = 4
+	Addr = 64.233.181.118
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = 6306
+Questions = 1
+Answers RRs = 2
+Authority RRs = 4
+Additional RRs = 4
+Queries:
+	Name = i4.ytimg.com
+	Type = 1
+	Class = 1
+Answers:
+	Name = i4.ytimg.com
+	Type = 5
+	Class = 1
+	Time to live = 3516
+	Data length = 17
+	CNAME = ytimg.l.google.com
+
+	Name = ytimg.l.google.com
+	Type = 1
+	Class = 1
+	Time to live = 67
+	Data length = 4
+	Addr = 64.233.181.118
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = 0f63
+Questions = 1
+Answers RRs = 2
+Authority RRs = 4
+Additional RRs = 4
+Queries:
+	Name = i3.ytimg.com
+	Type = 1
+	Class = 1
+Answers:
+	Name = i3.ytimg.com
+	Type = 5
+	Class = 1
+	Time to live = 3538
+	Data length = 17
+	CNAME = ytimg.l.google.com
+
+	Name = ytimg.l.google.com
+	Type = 1
+	Class = 1
+	Time to live = 58
+	Data length = 4
+	Addr = 64.233.181.118
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = 3157
+Questions = 1
+Answers RRs = 1
+Authority RRs = 3
+Additional RRs = 3
+Queries:
+	Name = ntp.ubuntu.com
+	Type = 1
+	Class = 1
+Answers:
+	Name = ntp.ubuntu.com
+	Type = 1
+	Class = 1
+	Time to live = 500
+	Data length = 4
+	Addr = 91.189.94.4
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = 5ad5
+Questions = 1
+Answers RRs = 1
+Authority RRs = 3
+Additional RRs = 3
+Queries:
+	Name = ntp.ubuntu.com
+	Type = 1
+	Class = 1
+Answers:
+	Name = ntp.ubuntu.com
+	Type = 1
+	Class = 1
+	Time to live = 498
+	Data length = 4
+	Addr = 91.189.94.4
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = cd83
+Questions = 1
+Answers RRs = 1
+Authority RRs = 3
+Additional RRs = 1
+Queries:
+	Name = www.mit.edu
+	Type = 1
+	Class = 1
+Answers:
+	Name = www.mit.edu
+	Type = 1
+	Class = 1
+	Time to live = 60
+	Data length = 4
+	Addr = 18.9.22.169
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = 25c0
+Questions = 1
+Answers RRs = 7
+Authority RRs = 4
+Additional RRs = 4
+Queries:
+	Name = www.google-analytics.com
+	Type = 1
+	Class = 1
+Answers:
+	Name = www.google-analytics.com
+	Type = 5
+	Class = 1
+	Time to live = 26306
+	Data length = 32
+	CNAME = www-google-analytics.l.google.com
+
+	Name = www-google-analytics.l.google.com
+	Type = 1
+	Class = 1
+	Time to live = 134
+	Data length = 4
+	Addr = 64.233.181.101
+
+	Name = www-google-analytics.l.google.com
+	Type = 1
+	Class = 1
+	Time to live = 134
+	Data length = 4
+	Addr = 64.233.181.102
+
+	Name = www-google-analytics.l.google.com
+	Type = 1
+	Class = 1
+	Time to live = 134
+	Data length = 4
+	Addr = 64.233.181.113
+
+	Name = www-google-analytics.l.google.com
+	Type = 1
+	Class = 1
+	Time to live = 134
+	Data length = 4
+	Addr = 64.233.181.138
+
+	Name = www-google-analytics.l.google.com
+	Type = 1
+	Class = 1
+	Time to live = 134
+	Data length = 4
+	Addr = 64.233.181.139
+
+	Name = www-google-analytics.l.google.com
+	Type = 1
+	Class = 1
+	Time to live = 134
+	Data length = 4
+	Addr = 64.233.181.100
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = f538
+Questions = 1
+Answers RRs = 1
+Authority RRs = 3
+Additional RRs = 1
+Queries:
+	Name = events.mit.edu
+	Type = 1
+	Class = 1
+Answers:
+	Name = events.mit.edu
+	Type = 1
+	Class = 1
+	Time to live = 21600
+	Data length = 4
+	Addr = 18.92.1.120
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = 6d52
+Questions = 1
+Answers RRs = 1
+Authority RRs = 3
+Additional RRs = 1
+Queries:
+	Name = web.mit.edu
+	Type = 1
+	Class = 1
+Answers:
+	Name = web.mit.edu
+	Type = 1
+	Class = 1
+	Time to live = 60
+	Data length = 4
+	Addr = 18.9.22.69
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = 4923
+Questions = 1
+Answers RRs = 1
+Authority RRs = 3
+Additional RRs = 1
+Queries:
+	Name = whereis.mit.edu
+	Type = 1
+	Class = 1
+Answers:
+	Name = whereis.mit.edu
+	Type = 1
+	Class = 1
+	Time to live = 21600
+	Data length = 4
+	Addr = 18.7.76.12
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = c51e
+Questions = 1
+Answers RRs = 2
+Authority RRs = 2
+Additional RRs = 0
+Queries:
+	Name = www.ll.mit.edu
+	Type = 1
+	Class = 1
+Answers:
+	Name = www.ll.mit.edu
+	Type = 5
+	Class = 1
+	Time to live = 183731
+	Data length = 12
+	CNAME = LLWEBPROD.ll.mit.edu
+
+	Name = LLWEBPROD.ll.mit.edu
+	Type = 1
+	Class = 1
+	Time to live = 183731
+	Data length = 4
+	Addr = 129.55.110.46
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = 4daf
+Questions = 1
+Answers RRs = 2
+Authority RRs = 3
+Additional RRs = 1
+Queries:
+	Name = libraries.mit.edu
+	Type = 1
+	Class = 1
+Answers:
+	Name = libraries.mit.edu
+	Type = 5
+	Class = 1
+	Time to live = 4920
+	Data length = 11
+	CNAME = MALGOSIA.mit.edu
+
+	Name = MALGOSIA.mit.edu
+	Type = 1
+	Class = 1
+	Time to live = 4920
+	Data length = 4
+	Addr = 18.51.0.23
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = c178
+Questions = 1
+Answers RRs = 1
+Authority RRs = 3
+Additional RRs = 1
+Queries:
+	Name = alum.mit.edu
+	Type = 1
+	Class = 1
+Answers:
+	Name = alum.mit.edu
+	Type = 1
+	Class = 1
+	Time to live = 120
+	Data length = 4
+	Addr = 18.9.62.90
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = 99c7
+Questions = 1
+Answers RRs = 1
+Authority RRs = 3
+Additional RRs = 1
+Queries:
+	Name = artscal.mit.edu
+	Type = 1
+	Class = 1
+Answers:
+	Name = artscal.mit.edu
+	Type = 1
+	Class = 1
+	Time to live = 21600
+	Data length = 4
+	Addr = 18.9.62.72
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = 3d14
+Questions = 1
+Answers RRs = 2
+Authority RRs = 2
+Additional RRs = 1
+Queries:
+	Name = www.mitadmissions.org
+	Type = 1
+	Class = 1
+Answers:
+	Name = www.mitadmissions.org
+	Type = 5
+	Class = 1
+	Time to live = 3600
+	Data length = 2
+	CNAME = mitadmissions.org
+
+	Type = 4288
+	Class = 4096
+	Time to live = 16777472
+	Data length = 14
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = fd5a
+Questions = 1
+Answers RRs = 2
+Authority RRs = 2
+Additional RRs = 0
+Queries:
+	Name = www.mitathletics.com
+	Type = 1
+	Class = 1
+Answers:
+	Name = www.mitathletics.com
+	Type = 5
+	Class = 1
+	Time to live = 38400
+	Data length = 2
+	CNAME = mitathletics.com
+
+	Type = 4288
+	Class = 4096
+	Time to live = 16777472
+	Data length = 150
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = 556c
+Questions = 1
+Answers RRs = 2
+Authority RRs = 3
+Additional RRs = 1
+Queries:
+	Name = watch.mit.edu
+	Type = 1
+	Class = 1
+Answers:
+	Name = watch.mit.edu
+	Type = 5
+	Class = 1
+	Time to live = 21600
+	Data length = 10
+	CNAME = IPANEMA.mit.edu
+
+	Name = IPANEMA.mit.edu
+	Type = 1
+	Class = 1
+	Time to live = 21600
+	Data length = 4
+	Addr = 18.9.60.95
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = 7961
+Questions = 1
+Answers RRs = 1
+Authority RRs = 3
+Additional RRs = 1
+Queries:
+	Name = diversity.mit.edu
+	Type = 1
+	Class = 1
+Answers:
+	Name = diversity.mit.edu
+	Type = 1
+	Class = 1
+	Time to live = 21600
+	Data length = 4
+	Addr = 18.9.62.51
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = 0d7b
+Questions = 1
+Answers RRs = 1
+Authority RRs = 3
+Additional RRs = 1
+Queries:
+	Name = global.mit.edu
+	Type = 1
+	Class = 1
+Answers:
+	Name = global.mit.edu
+	Type = 1
+	Class = 1
+	Time to live = 21600
+	Data length = 4
+	Addr = 18.9.62.52
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = 3dc4
+Questions = 1
+Answers RRs = 1
+Authority RRs = 3
+Additional RRs = 1
+Queries:
+	Name = mit.edu
+	Type = 1
+	Class = 1
+Answers:
+	Name = mit.edu
+	Type = 1
+	Class = 1
+	Time to live = 60
+	Data length = 4
+	Addr = 18.9.22.69
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = b9fc
+Questions = 1
+Answers RRs = 2
+Authority RRs = 3
+Additional RRs = 1
+Queries:
+	Name = hrweb.mit.edu
+	Type = 1
+	Class = 1
+Answers:
+	Name = hrweb.mit.edu
+	Type = 5
+	Class = 1
+	Time to live = 21600
+	Data length = 11
+	CNAME = WILDCATS.mit.edu
+
+	Name = WILDCATS.mit.edu
+	Type = 1
+	Class = 1
+	Time to live = 21600
+	Data length = 4
+	Addr = 18.9.62.60
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = 3d10
+Questions = 1
+Answers RRs = 2
+Authority RRs = 3
+Additional RRs = 1
+Queries:
+	Name = giving.mit.edu
+	Type = 1
+	Class = 1
+Answers:
+	Name = giving.mit.edu
+	Type = 5
+	Class = 1
+	Time to live = 21600
+	Data length = 10
+	CNAME = DESSERT.mit.edu
+
+	Name = DESSERT.mit.edu
+	Type = 1
+	Class = 1
+	Time to live = 21600
+	Data length = 4
+	Addr = 18.9.60.52
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = a1d8
+Questions = 1
+Answers RRs = 7
+Authority RRs = 3
+Additional RRs = 3
+Queries:
+	Name = mitnewsoffice.122.2o7.net
+	Type = 1
+	Class = 1
+Answers:
+	Name = mitnewsoffice.122.2o7.net
+	Type = 1
+	Class = 1
+	Time to live = 900
+	Data length = 4
+	Addr = 66.235.143.121
+
+	Name = mitnewsoffice.122.2o7.net
+	Type = 1
+	Class = 1
+	Time to live = 900
+	Data length = 4
+	Addr = 66.235.142.2
+
+	Name = mitnewsoffice.122.2o7.net
+	Type = 1
+	Class = 1
+	Time to live = 900
+	Data length = 4
+	Addr = 66.235.142.3
+
+	Name = mitnewsoffice.122.2o7.net
+	Type = 1
+	Class = 1
+	Time to live = 900
+	Data length = 4
+	Addr = 66.235.142.20
+
+	Name = mitnewsoffice.122.2o7.net
+	Type = 1
+	Class = 1
+	Time to live = 900
+	Data length = 4
+	Addr = 66.235.142.24
+
+	Name = mitnewsoffice.122.2o7.net
+	Type = 1
+	Class = 1
+	Time to live = 900
+	Data length = 4
+	Addr = 66.235.143.54
+
+	Name = mitnewsoffice.122.2o7.net
+	Type = 1
+	Class = 1
+	Time to live = 900
+	Data length = 4
+	Addr = 66.235.143.118
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = 350f
+Questions = 1
+Answers RRs = 2
+Authority RRs = 3
+Additional RRs = 1
+Queries:
+	Name = techtv.mit.edu
+	Type = 1
+	Class = 1
+Answers:
+	Name = techtv.mit.edu
+	Type = 5
+	Class = 1
+	Time to live = 4734
+	Data length = 6
+	CNAME = TTV.mit.edu
+
+	Name = TTV.mit.edu
+	Type = 1
+	Class = 1
+	Time to live = 4734
+	Data length = 4
+	Addr = 18.9.60.50
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = ed0a
+Questions = 1
+Answers RRs = 1
+Authority RRs = 3
+Additional RRs = 1
+Queries:
+	Name = mcgovern.mit.edu
+	Type = 1
+	Class = 1
+Answers:
+	Name = mcgovern.mit.edu
+	Type = 1
+	Class = 1
+	Time to live = 21600
+	Data length = 4
+	Addr = 18.9.60.165
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = 7506
+Questions = 1
+Answers RRs = 1
+Authority RRs = 4
+Additional RRs = 0
+Queries:
+	Name = www.popsci.com
+	Type = 1
+	Class = 1
+Answers:
+	Name = www.popsci.com
+	Type = 1
+	Class = 1
+	Time to live = 3600
+	Data length = 4
+	Addr = 209.208.1.41
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = 650f
+Questions = 1
+Answers RRs = 2
+Authority RRs = 4
+Additional RRs = 0
+Queries:
+	Name = www.masshightech.com
+	Type = 1
+	Class = 1
+Answers:
+	Name = www.masshightech.com
+	Type = 5
+	Class = 1
+	Time to live = 3600
+	Data length = 2
+	CNAME = masshightech.com
+
+	Type = 4288
+	Class = 4096
+	Time to live = 16777472
+	Data length = 14
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = f52e
+Questions = 1
+Answers RRs = 1
+Authority RRs = 5
+Additional RRs = 4
+Queries:
+	Name = www.technologyreview.com
+	Type = 1
+	Class = 1
+Answers:
+	Name = www.technologyreview.com
+	Type = 1
+	Class = 1
+	Time to live = 1
+	Data length = 4
+	Addr = 69.147.160.210
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = 9d60
+Questions = 1
+Answers RRs = 1
+Authority RRs = 4
+Additional RRs = 4
+Queries:
+	Name = twitter.com
+	Type = 1
+	Class = 1
+Answers:
+	Name = twitter.com
+	Type = 1
+	Class = 1
+	Time to live = 30
+	Data length = 4
+	Addr = 128.121.146.100
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = fdcf
+Questions = 1
+Answers RRs = 2
+Authority RRs = 3
+Additional RRs = 1
+Queries:
+	Name = bt.mit.edu
+	Type = 1
+	Class = 1
+Answers:
+	Name = bt.mit.edu
+	Type = 5
+	Class = 1
+	Time to live = 21600
+	Data length = 17
+	CNAME = SCRIPTS-VHOSTS.mit.edu
+
+	Name = SCRIPTS-VHOSTS.mit.edu
+	Type = 1
+	Class = 1
+	Time to live = 21600
+	Data length = 4
+	Addr = 18.181.0.46
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = 05b8
+Questions = 1
+Answers RRs = 1
+Authority RRs = 2
+Additional RRs = 2
+Queries:
+	Name = mitenergyconference.com
+	Type = 1
+	Class = 1
+Answers:
+	Name = mitenergyconference.com
+	Type = 1
+	Class = 1
+	Time to live = 3600
+	Data length = 4
+	Addr = 97.74.215.84
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = 31a1
+Questions = 1
+Answers RRs = 3
+Authority RRs = 4
+Additional RRs = 4
+Queries:
+	Name = www.google.com.sg
+	Type = 1
+	Class = 1
+Answers:
+	Name = www.google.com.sg
+	Type = 5
+	Class = 1
+	Time to live = 192653
+	Data length = 16
+	CNAME = www.google.com
+
+	Name = www.google.com
+	Type = 5
+	Class = 1
+	Time to live = 104705
+	Data length = 8
+	CNAME = www.l.google.com
+
+	Name = www.l.google.com
+	Type = 1
+	Class = 1
+	Time to live = 47
+	Data length = 4
+	Addr = 216.239.61.104
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = f5bf
+Questions = 1
+Answers RRs = 2
+Authority RRs = 4
+Additional RRs = 4
+Queries:
+	Name = www.google.com
+	Type = 1
+	Class = 1
+Answers:
+	Name = www.google.com
+	Type = 5
+	Class = 1
+	Time to live = 104675
+	Data length = 8
+	CNAME = www.l.google.com
+
+	Name = www.l.google.com
+	Type = 1
+	Class = 1
+	Time to live = 17
+	Data length = 4
+	Addr = 216.239.61.104
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = 8866
+Questions = 1
+Answers RRs = 1
+Authority RRs = 3
+Additional RRs = 3
+Queries:
+	Name = www.singtel.com.sg
+	Type = 1
+	Class = 1
+Answers:
+	Name = www.singtel.com.sg
+	Type = 1
+	Class = 1
+	Time to live = 600
+	Data length = 4
+	Addr = 203.208.248.10
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = 050e
+Questions = 1
+Answers RRs = 2
+Authority RRs = 2
+Additional RRs = 0
+Queries:
+	Name = www.starhub.com.sg
+	Type = 1
+	Class = 1
+Answers:
+	Name = www.starhub.com.sg
+	Type = 5
+	Class = 1
+	Time to live = 3600
+	Data length = 8
+	CNAME = wlbs1.starhub.com.sg
+
+	Name = wlbs1.starhub.com.sg
+	Type = 1
+	Class = 1
+	Time to live = 3600
+	Data length = 4
+	Addr = 203.116.221.50
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = 2a76
+Questions = 1
+Answers RRs = 4
+Authority RRs = 2
+Additional RRs = 0
+Queries:
+	Name = www.yahoo.com
+	Type = 1
+	Class = 1
+Answers:
+	Name = www.yahoo.com
+	Type = 5
+	Class = 1
+	Time to live = 84
+	Data length = 11
+	CNAME = fp.wg1.b.yahoo.com
+
+	Name = fp.wg1.b.yahoo.com
+	Type = 5
+	Class = 1
+	Time to live = 60
+	Data length = 13
+	CNAME = any-fp.wa1.b.yahoo.com
+
+	Name = any-fp.wa1.b.yahoo.com
+	Type = 1
+	Class = 1
+	Time to live = 60
+	Data length = 4
+	Addr = 98.137.149.56
+
+	Name = any-fp.wa1.b.yahoo.com
+	Type = 1
+	Class = 1
+	Time to live = 60
+	Data length = 4
+	Addr = 72.30.2.43
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = c19f
+Questions = 1
+Answers RRs = 2
+Authority RRs = 5
+Additional RRs = 3
+Queries:
+	Name = ftp.nus.edu.sg
+	Type = 1
+	Class = 1
+Answers:
+	Name = ftp.nus.edu.sg
+	Type = 5
+	Class = 1
+	Time to live = 7200
+	Data length = 12
+	CNAME = ftpserver.nus.edu.sg
+
+	Name = ftpserver.nus.edu.sg
+	Type = 1
+	Class = 1
+	Time to live = 7200
+	Data length = 4
+	Addr = 137.132.12.100
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = d1aa
+Questions = 1
+Answers RRs = 1
+Authority RRs = 5
+Additional RRs = 3
+Queries:
+	Name = ftp.science.nus.edu.sg
+	Type = 1
+	Class = 1
+Answers:
+	Name = ftp.science.nus.edu.sg
+	Type = 1
+	Class = 1
+	Time to live = 7200
+	Data length = 4
+	Addr = 137.132.69.169
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = f12a
+Questions = 1
+Answers RRs = 5
+Authority RRs = 4
+Additional RRs = 4
+Queries:
+	Name = sb-ssl.google.com
+	Type = 1
+	Class = 1
+Answers:
+	Name = sb-ssl.google.com
+	Type = 5
+	Class = 1
+	Time to live = 183896
+	Data length = 11
+	CNAME = sb-ssl.l.google.com
+
+	Name = sb-ssl.l.google.com
+	Type = 1
+	Class = 1
+	Time to live = 300
+	Data length = 4
+	Addr = 64.233.181.91
+
+	Name = sb-ssl.l.google.com
+	Type = 1
+	Class = 1
+	Time to live = 300
+	Data length = 4
+	Addr = 64.233.181.93
+
+	Name = sb-ssl.l.google.com
+	Type = 1
+	Class = 1
+	Time to live = 300
+	Data length = 4
+	Addr = 64.233.181.136
+
+	Name = sb-ssl.l.google.com
+	Type = 1
+	Class = 1
+	Time to live = 300
+	Data length = 4
+	Addr = 64.233.181.190
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = f971
+Questions = 1
+Answers RRs = 7
+Authority RRs = 4
+Additional RRs = 4
+Queries:
+	Name = safebrowsing.clients.google.com
+	Type = 1
+	Class = 1
+Answers:
+	Name = safebrowsing.clients.google.com
+	Type = 5
+	Class = 1
+	Time to live = 125
+	Data length = 12
+	CNAME = clients.l.google.com
+
+	Name = clients.l.google.com
+	Type = 1
+	Class = 1
+	Time to live = 105
+	Data length = 4
+	Addr = 64.233.181.138
+
+	Name = clients.l.google.com
+	Type = 1
+	Class = 1
+	Time to live = 105
+	Data length = 4
+	Addr = 64.233.181.139
+
+	Name = clients.l.google.com
+	Type = 1
+	Class = 1
+	Time to live = 105
+	Data length = 4
+	Addr = 64.233.181.100
+
+	Name = clients.l.google.com
+	Type = 1
+	Class = 1
+	Time to live = 105
+	Data length = 4
+	Addr = 64.233.181.101
+
+	Name = clients.l.google.com
+	Type = 1
+	Class = 1
+	Time to live = 105
+	Data length = 4
+	Addr = 64.233.181.102
+
+	Name = clients.l.google.com
+	Type = 1
+	Class = 1
+	Time to live = 105
+	Data length = 4
+	Addr = 64.233.181.113
+
+----------------------
+DNS Transaction
+----------------------
+transaction_id = a99b
+Questions = 1
+Answers RRs = 2
+Authority RRs = 4
+Additional RRs = 4
+Queries:
+	Name = safebrowsing-cache.google.com
+	Type = 1
+	Class = 1
+Answers:
+	Name = safebrowsing-cache.google.com
+	Type = 5
+	Class = 1
+	Time to live = 106251
+	Data length = 23
+	CNAME = safebrowsing.cache.l.google.com
+
+	Name = safebrowsing.cache.l.google.com
+	Type = 1
+	Class = 1
+	Time to live = 57
+	Data length = 4
+	Addr = 74.125.162.91
+
