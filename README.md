@@ -2,7 +2,9 @@
 
 ###Running the code
 Required components - python
+
 Developed on MacOSX 10.8.2
+
 Tested on CentOS 6
 
 ####Running count.py
