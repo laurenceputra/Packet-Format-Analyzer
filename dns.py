@@ -92,29 +92,11 @@ for line in file:
                                     if (packet_list[curr_read_index] + packet_list[curr_read_index + 1])[1:0] in url_dict:
                                         record_print_list.append('\tName = ' + url_dict[(packet_list[curr_read_index] + packet_list[curr_read_index + 1])[1:0]])
                                     else:
-                                        tmp_index = int(packet_list[curr_read_index][1:] + packet_list[curr_read_index + 1], 16)
-                                        tmp_index = tmp_index + offset + 8 + 20 + 14
-                                        read_url_done = False
-                                        num_bytes = int(packet_list[tmp_index], 16)
-                                        tmp_index += 1
-                                        url = ''
-                                        while not read_url_done:
-                                            bytes_count = num_bytes
-                                            read_url_segment_done = False
-                                            while not read_url_segment_done:
-                                                url += packet_list[tmp_index].decode('hex')
-                                                tmp_index += 1
-                                                bytes_count -= 1
-                                                if bytes_count == 0:
-                                                    read_url_segment_done = True
-                                            num_bytes = int(packet_list[tmp_index], 16)
-                                            tmp_index += 1
-                                            if num_bytes == 0:
-                                                read_url_done = True
-                                            else:
-                                                url += '.'
-                                        record_print_list.append('\tName = ' + url)
-                                        url_dict[(packet_list[curr_read_index] + packet_list[curr_read_index + 1])[1:0]] = url
+                                        url_start = int(packet_list[curr_read_index][1:] + packet_list[curr_read_index + 1], 16)
+                                        tmp_index = url_start + offset + 8 + 20 + 14
+                                        read_url_dict = packet_analyzer_util.read_url(packet_list, tmp_index, url_start, offset)
+                                        record_print_list.append('\tName = ' + read_url_dict['url'])
+                                        url_dict['url_start'] = read_url_dict['url']
                                     curr_read_index += 2
                                 #section 2: type
                                 dns_type = int(packet_list[curr_read_index] + packet_list[curr_read_index + 1], 16)
@@ -134,47 +116,23 @@ for line in file:
                                 record_print_list.append('\tData length = ' + str(data_length))
                                 #section 6: data
                                 url_start = curr_read_index - offset - 8 - 20 - 14
-                                url = []
-                                while data_length > 0:
-                                    url.append(packet_list[curr_read_index])
-                                    curr_read_index += 1
-                                    data_length -= 1
                                 if dns_type == 1:
+                                    url = []
+                                    while data_length > 0:
+                                        url.append(packet_list[curr_read_index])
+                                        curr_read_index += 1
+                                        data_length -= 1
                                     ip = str(int(url[0], 16)) + '.' + str(int(url[1],16)) + '.' + str(int(url[2],16)) + '.' + str(int(url[3],16))
                                     record_print_list.append('\tAddr = ' + ip)
                                 elif dns_type == 5:
-                                    tmp_index = 0
-                                    num_bytes = url[tmp_index]
-                                    tmp_index += 1
-                                    read_url_done = False
-                                    tmp_url = ''
-                                    while not read_url_done:
-                                        bytes_count = int(num_bytes, 16)
-                                        read_url_segment_done = False
-                                        while not read_url_segment_done:
-                                            print tmp_index
-                                            print tmp_url
-                                            tmp_url += url[tmp_index].decode('hex')
-                                            tmp_index += 1
-                                            bytes_count -= 1
-                                            if bytes_count == 0:
-                                                read_url_segment_done = True
-                                        num_bytes = url[tmp_index]
-                                        tmp_index += 1
-                                        if num_bytes == '00':
-                                            read_url_done = True
-                                        elif num_bytes[0] == 'c':
-                                            tmp_url += '.' + url_dict[num_bytes[1]+url[tmp_index]]
-                                            read_url_done = True
-                                        else:
-                                            tmp_url += '.'
-                                    record_print_list.append('\tCNAME = ' + tmp_url)
-                                    url_dict[hex(url_start)[2:].zfill(3)] = tmp_url
+                                    read_url_dict = packet_analyzer_util.read_url(packet_list, curr_read_index, url_start, offset, data_length)
+                                    curr_read_index += read_url_dict['length']
+                                    record_print_list.append('\tCNAME = ' + read_url_dict['url'])
+                                    url_dict[hex(url_start)[2:].zfill(3)] = read_url_dict['url']
                                 record_print_list.append('')
                                 answers_count -= 1
                             if num_answers != 0:
                                 print_list.append('\n'.join(record_print_list))
-                                print '\n'.join(record_print_list)
             url_dict = {}
             record_print_list = []
             packet_list = []

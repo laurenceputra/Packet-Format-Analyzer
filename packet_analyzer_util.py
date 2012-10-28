@@ -16,22 +16,29 @@ def read_url(packet, start, url_start, offset, length = 0):
     while not read_url_done:
         bytes_count = int(num_bytes, 16)
         read_url_segment_done = False
-        while not read_url_segment_done:
+        while not read_url_segment_done and num_bytes != '00' and num_bytes != 'c0':
             url += packet[curr_read_index].decode('hex')
             curr_read_index += 1
             bytes_count -= 1
             if bytes_count == 0:
                 read_url_segment_done = True
-        num_bytes = packet[curr_read_index]
-        curr_read_index += 1
-        if num_bytes == '00':
-            read_url_done = True
-        elif num_bytes[0] == 'c'
+        if num_bytes[0] == 'c':
             new_index = int(num_bytes[1] + packet[curr_read_index], 16)
-            curr_read_index += 1
-            url += read_url(packet, new_index + offset, url_start, offset)
+            url += read_url(packet, new_index + offset + 20 + 14 + 8, new_index, offset)['url']
+            read_url_done = True
         else:
-            url += '.'
+            num_bytes = packet[curr_read_index]
+            curr_read_index += 1
+            if num_bytes == '00':
+                read_url_done = True
+            elif num_bytes[0] == 'c':
+                new_index = int(num_bytes[1] + packet[curr_read_index], 16)
+                curr_read_index += 1
+                url += '.'
+                url += read_url(packet, new_index + offset + 20 + 14 + 8, new_index, offset)['url']
+                read_url_done = True
+            else:
+                url += '.'
     return_val = {}
     return_val['url_start_index'] = url_start
     return_val['url'] = url
