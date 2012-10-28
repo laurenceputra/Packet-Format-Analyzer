@@ -66,26 +66,9 @@ for line in file:
                                 #section 1: name(url)
                                 read_url_done = False
                                 url_start = curr_read_index - offset - 8 - 20 - 14
-                                num_bytes = int(packet_list[curr_read_index], 16)
-                                curr_read_index += 1
-                                url = ''
-                                while not read_url_done:
-                                    bytes_count = num_bytes
-                                    read_url_segment_done = False
-                                    while not read_url_segment_done:
-                                        url += packet_list[curr_read_index].decode('hex')
-                                        curr_read_index += 1
-                                        bytes_count -= 1
-                                        if bytes_count == 0:
-                                            read_url_segment_done = True
-                                    num_bytes = int(packet_list[curr_read_index], 16)
-                                    curr_read_index += 1
-                                    if num_bytes == 0:
-                                        read_url_done = True
-                                    else:
-                                        url += '.'
-                                url_dict[hex(url_start)[2:].zfill(3)] = url
-                                record_print_list.append('\tName = ' + url)
+                                read_url_dict = packet_analyzer_util.read_url(packet_list, curr_read_index, url_start)
+                                url_dict[hex(read_url_dict['url_start'])[2:].zfill(3)] = read_url_dict['url']
+                                record_print_list.append('\tName = ' + read_url_dict['url'])
                                 #section 2: type
                                 dns_type = int(packet_list[curr_read_index] + packet_list[curr_read_index + 1], 16)
                                 curr_read_index += 2
