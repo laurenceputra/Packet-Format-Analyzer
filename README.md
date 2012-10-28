@@ -9,10 +9,12 @@ Tested on CentOS 6
 
 ####Running count.py
 argument for count.py is the name of the hexdump
+
     python count.py hex.dat
 
 ####Running dns.py
 argument for dns.py is the name of the hexdump
+
     python dns.py hex.dat
 
 
