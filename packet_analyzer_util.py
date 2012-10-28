@@ -7,7 +7,7 @@ def is_hex(str):
     hex_digits = set(string.hexdigits)
     return all(c in hex_digits for c in str)
 
-def read_url(packet, start, url_start, length = 0):
+def read_url(packet, start, url_start, offset, length = 0):
     read_url_done = False
     read_url_segment_done = False
     url = ''
@@ -26,6 +26,10 @@ def read_url(packet, start, url_start, length = 0):
         curr_read_index += 1
         if num_bytes == '00':
             read_url_done = True
+        elif num_bytes[0] == 'c'
+            new_index = int(num_bytes[1] + packet[curr_read_index], 16)
+            curr_read_index += 1
+            url += read_url(packet, new_index + offset, url_start, offset)
         else:
             url += '.'
     return_val = {}

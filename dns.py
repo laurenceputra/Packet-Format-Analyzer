@@ -66,7 +66,7 @@ for line in file:
                                 #section 1: name(url)
                                 read_url_done = False
                                 url_start = curr_read_index - offset - 8 - 20 - 14
-                                read_url_dict = packet_analyzer_util.read_url(packet_list, curr_read_index, url_start)
+                                read_url_dict = packet_analyzer_util.read_url(packet_list, curr_read_index, url_start, offset)
                                 url_dict[hex(read_url_dict['url_start_index'])[2:].zfill(3)] = read_url_dict['url']
                                 record_print_list.append('\tName = ' + read_url_dict['url'])
                                 #section 2: type
