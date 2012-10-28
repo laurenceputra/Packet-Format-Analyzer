@@ -46,7 +46,9 @@ def read_url(packet, start, url_start, offset, length = 0):
     return return_val
 
 def process_packet(packet_list, transactions_dict):
+    record_print_list = []
     return_val = {}
+    url_dict = {}
     return_val['num_dns'] = 0
     return_val['num_dns_transactions'] = 0
     return_val['print_stuff'] = ''
@@ -88,7 +90,7 @@ def process_packet(packet_list, transactions_dict):
                         #section 1: name(url)
                         read_url_done = False
                         url_start = curr_read_index - offset - 8 - 20 - 14
-                        read_url_dict = packet_analyzer_util.read_url(packet_list, curr_read_index, url_start, offset)
+                        read_url_dict = read_url(packet_list, curr_read_index, url_start, offset)
                         url_dict[hex(read_url_dict['url_start_index'])[2:].zfill(3)] = read_url_dict['url']
                         record_print_list.append('\tName = ' + read_url_dict['url'])
                         #section 2: type
@@ -116,7 +118,7 @@ def process_packet(packet_list, transactions_dict):
                             else:
                                 url_start = int(packet_list[curr_read_index][1:] + packet_list[curr_read_index + 1], 16)
                                 tmp_index = url_start + offset + 8 + 20 + 14
-                                read_url_dict = packet_analyzer_util.read_url(packet_list, tmp_index, url_start, offset)
+                                read_url_dict = read_url(packet_list, tmp_index, url_start, offset)
                                 record_print_list.append('\tName = ' + read_url_dict['url'])
                                 url_dict['url_start'] = read_url_dict['url']
                             curr_read_index += 2
@@ -147,7 +149,7 @@ def process_packet(packet_list, transactions_dict):
                             ip = str(int(url[0], 16)) + '.' + str(int(url[1],16)) + '.' + str(int(url[2],16)) + '.' + str(int(url[3],16))
                             record_print_list.append('\tAddr = ' + ip)
                         elif dns_type == 5:
-                            read_url_dict = packet_analyzer_util.read_url(packet_list, curr_read_index, url_start, offset, data_length)
+                            read_url_dict = read_url(packet_list, curr_read_index, url_start, offset, data_length)
                             curr_read_index += read_url_dict['length']
                             record_print_list.append('\tCNAME = ' + read_url_dict['url'])
                             url_dict[hex(url_start)[2:].zfill(3)] = read_url_dict['url']
