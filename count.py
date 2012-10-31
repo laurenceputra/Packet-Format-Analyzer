@@ -75,9 +75,8 @@ for line in file:
             data = line[offset_len + 2: offset_len + 2 + 47]
             ascii = line[offset_len + 52:-1]
             bytelist = data.split(' ')
-            bytelist = filter(packet_analyzer_util.filter_empty, bytelist)
-            for byte in bytelist:
-                packet_list.append(byte)
+            #bytelist = filter(packet_analyzer_util.filter_empty, bytelist)
+            packet_list += bytelist
 
 #processing for final packet
 if packet_list:

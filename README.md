@@ -1,4 +1,11 @@
+Formatted version of the readme can be found at https://github.com/laurenceputra/Packet-Format-Analyzer/blob/master/README.md
+
 #Wireshark capture analyzer
+
+###Submission details
+Name = Laurence Putra Franslay
+
+Matric No = U096833E
 
 ###Running the code
 Required components - python
