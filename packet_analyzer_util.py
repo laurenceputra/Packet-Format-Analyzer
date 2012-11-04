@@ -16,14 +16,14 @@ def read_url(packet, start, url_start, offset, length = 0):
     while not read_url_done:
         bytes_count = int(num_bytes, 16)
         read_url_segment_done = False
-        while not read_url_segment_done and num_bytes != '00' and num_bytes != 'c0':
+        while not read_url_segment_done and num_bytes != '00' and bin(int(num_bytes, 16))[2:].zfill(8)[0:2] != '11':
             url += packet[curr_read_index].decode('hex')
             curr_read_index += 1
             bytes_count -= 1
             if bytes_count == 0:
                 read_url_segment_done = True
-        if num_bytes[0] == 'c':
-            new_index = int(num_bytes[1] + packet[curr_read_index], 16)
+        if bin(int(num_bytes, 16))[2:].zfill(8)[0:2] == '11':
+            new_index = int(bin(int(num_bytes, 16))[2:].zfill(8)[2:] + bin(int(packet[curr_read_index], 16))[2:].zfill(8), 2)
             url += read_url(packet, new_index + offset + 20 + 14 + 8, new_index, offset)['url']
             read_url_done = True
         else:
@@ -31,8 +31,8 @@ def read_url(packet, start, url_start, offset, length = 0):
             curr_read_index += 1
             if num_bytes == '00':
                 read_url_done = True
-            elif num_bytes[0] == 'c':
-                new_index = int(num_bytes[1] + packet[curr_read_index], 16)
+            elif bin(int(num_bytes, 16))[2:].zfill(8)[0:2] == '11':
+                new_index = int(bin(int(num_bytes, 16))[2:].zfill(8)[2:] + bin(int(packet[curr_read_index], 16))[2:].zfill(8), 2)
                 curr_read_index += 1
                 url += '.'
                 url += read_url(packet, new_index + offset + 20 + 14 + 8, new_index, offset)['url']
